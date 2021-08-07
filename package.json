@@ -1,0 +1,41 @@
+{
+	"name": "nest-maker-cli",
+	"version": "0.0.1",
+	"description": "Nest CLI to create Modules through templates",
+	"main": "./lib/index.js",
+	"scripts": {
+		"exec": "ts-node src/index.ts",
+		"start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+		"create": "npm run build && npm run test",
+		"build": "tsc -p .",
+		"local": "sudo npm i -g && pizza",
+		"refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+	},
+	"bin": {
+		"nest-maker-cli": "./lib/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/valiulab-core/nest-maker-cli.git"
+	},
+	"author": "Valiu lab",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/valiulab-core/nest-maker-cli/issues"
+	},
+	"homepage": "https://github.com/valiulab-core/nest-maker-cli#readme",
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"clear": "^0.1.0",
+		"commander": "^8.1.0",
+		"figlet": "^1.5.0",
+		"minimist": "^1.2.5",
+		"path": "^0.12.7"
+	},
+	"devDependencies": {
+		"@types/node": "^16.4.13",
+		"nodemon": "^2.0.12",
+		"ts-node": "^10.1.0",
+		"typescript": "^4.3.5"
+	}
+}

@@ -1,0 +1,11 @@
+import { Inject, Injectable } from '@nestjs/common';
+import { ResourceAffected } from './{{lowerName}}';
+import { ModelClass } from 'objection';
+
+@Injectable()
+export class {{upperName}}Service {{serviceExtends}} {
+
+  constructor(@Inject({{upperName}}) private readonly _{{lowerName}}Model: ModelClass<{{upperName}}>) {
+    super(_{{lowerName}}Model);
+  }
+}
